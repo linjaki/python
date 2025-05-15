@@ -1,3 +1,7 @@
+def calulate_bmi(h:int, w:int):
+    bmicalculate = w / h ** 2
+    return bmicallulate
+
 def main():
     # BMI計算
     try:
