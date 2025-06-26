@@ -73,3 +73,11 @@ wcwidth @ file:///home/conda/feedstock_root/build_artifacts/wcwidth_173323132628
 wheel==0.45.1
 zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1732827521216/work
 zstandard @ file:///croot/zstandard_1731356346222/work
+yfinance @ file:///croot/yfinance_1731356346222/work
+jinja2 @ file:///croot/jinja2_1731356346222/work
+openpyxl @ file:///croot/openpyxl_1731356346222/work
+wget @ file:///croot/wget_1731356346222/work
+matplotlib @ file:///croot/matplotlib_1731356346222/work
+pandas @ file:///croot/pandas_1731356346222/work
+numpy @ file:///croot/numpy_1731356346222/work
+requests @ file:///croot/requests_1731356346222/work
