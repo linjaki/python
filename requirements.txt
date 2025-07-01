@@ -81,3 +81,4 @@ matplotlib @ file:///croot/matplotlib_1731356346222/work
 pandas @ file:///croot/pandas_1731356346222/work
 numpy @ file:///croot/numpy_1731356346222/work
 requests @ file:///croot/requests_1731356346222/work
+seaborn @ file:///croot/seaborn_1731356346222/work
