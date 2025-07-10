@@ -1,12 +1,42 @@
 from flask import Flask
 from markupsafe import escape
+from google import genai
 
 app = Flask(__name__)
 
 @app.route("/")
-def index():
-    return "<h1>您好, 全世界!</h1>"
+@app.route("/<string:question> ")
+def index(question:str=' '):
+    if question==' ':
+        return "<h1>我是Gemini的小幫手</h1>"
+    else:
+        client = genai.Client()
+        response = client.models.generate_content(
+            model="gemini-1.5-flash", contents=f"{question},回應請輸出成為html格式")
+        
+    html_format = response.text
+    html_format = html_format.replace("```html```","").replace("```","")
+    return html_format
 
-@app.route("/user/<name>")
-def show_name(name):
-    return f"<h1>您好, {escape(name)}</h1>"
+
+
+
+from flask import Flask
+from markupsafe import escape
+from google import genai
+
+app = Flask(__name__)
+
+@app.route("/")
+@app.route("/<string:question>")
+def index(question:str=''):
+    if question=='':
+        return "<h1>我是Gemini的小助手</h1>"
+    else:
+        client = genai.Client()
+        response = client.models.generate_content(
+            model="gemini-2.5-flash", contents=f"{question},回應請輸出成為html格式"
+        )
+        html_format = response.text
+        html_format = response.text.replace("```html","").replace("```","")
+        return html_format
